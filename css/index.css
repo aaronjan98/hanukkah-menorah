@@ -18,3 +18,7 @@ svg {
 .shamash-column {
   fill: linear-gradient(90deg, blue 50%, yellow 50%);
 }
+
+#left-arms path {
+  fill: var(--medium-orange);
+}
