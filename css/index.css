@@ -1,0 +1,5 @@
+svg {
+  border: 3px red solid;
+  width: max-content;
+  max-width: 1048px;
+}
