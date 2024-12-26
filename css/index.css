@@ -1,3 +1,14 @@
+:root {
+  --bright-yellow: #f6d64f;
+  --dijon-yellow: #f7d750;
+  --light-orange: #f3a61e;
+  --medium-orange: #f5822b;
+}
+
+body {
+  background: black;
+}
+
 svg {
   border: 3px red solid;
   width: max-content;
