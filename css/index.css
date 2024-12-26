@@ -14,3 +14,7 @@ svg {
   width: max-content;
   max-width: 1048px;
 }
+
+.shamash-column {
+  fill: linear-gradient(90deg, blue 50%, yellow 50%);
+}
