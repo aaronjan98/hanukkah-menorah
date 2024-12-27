@@ -3,6 +3,7 @@
   --dijon-yellow: #f7d750;
   --light-orange: #f3a61e;
   --medium-orange: #f5822b;
+  --dark-orange: #958032;
 }
 
 body {
@@ -21,4 +22,8 @@ svg {
 
 #left-arms path {
   fill: var(--medium-orange);
+}
+
+#right-arms path {
+  fill: var(--bright-yellow);
 }
