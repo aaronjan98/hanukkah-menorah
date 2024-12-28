@@ -22,16 +22,16 @@ body {
 
 .menorah-container {
   position: relative;
-  max-width: 700px;
+  max-width: 675px;
   width: 100%;
   margin: auto;
 }
 
 .menorah {
-  /* border: 3px red solid; */
   max-width: 700px;
   height: auto;
   margin: auto;
+  padding-top: 30%;
 }
 
 .shamash-column {
@@ -52,15 +52,12 @@ body {
   height: auto;
 }
 
-#candle-1 {
-  position: absolute;
-  top: 4%;
-  left: 4%;
-  color: yellow;
+#candle-0 {
+  top: 8%;
+  left: 48%;
 }
-#candle-2 {
-  position: absolute;
-  top: 0%;
-  left: 39.35%;
-  color: yellow;
+
+#candle-8 {
+  top: 12%;
+  left: 13%;
 }

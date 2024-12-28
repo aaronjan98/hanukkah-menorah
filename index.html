@@ -12,10 +12,23 @@
     <div class="menorah-container">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 -45 500 350"
+        viewBox="0 0 500 350"
         class="menorah"
       >
         <defs>
+          <linearGradient
+            id="candle-gradient"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
+            <stop offset="50%" style="stop-color: snow; stop-opacity: 1"></stop>
+            <stop
+              offset="90%"
+              style="stop-color: #c4c2c2; stop-opacity: 1"
+            ></stop>
+          </linearGradient>
           <linearGradient
             id="candle-holder-cone"
             x1="0%"
@@ -289,19 +302,20 @@
       <!-- Candles positioned outside the SVG -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 60"
-        id="candle-1"
+        viewBox="0 0 20 125"
+        id="candle-0"
         class="candle"
+        style="top: 8%; left: 48%"
       >
-        <rect width="20" height="60" fill="yellow"></rect>
+        <rect width="20" height="125" fill="url(#candle-gradient)"></rect>
       </svg>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 60"
-        id="candle-2"
+        viewBox="0 0 20 125"
+        id="candle-8"
         class="candle"
       >
-        <rect width="20" height="60" fill="yellow"></rect>
+        <rect width="20" height="125" fill="url(#candle-gradient)"></rect>
       </svg>
     </div>
   </body>
