@@ -12,83 +12,62 @@
     <div class="menorah-container">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 500 350"
+        viewBox="0 -45 500 350"
         class="menorah"
       >
-        <!-- Menorah elements -->
-        <!-- <path d="M r 0 C r k*r, k*r r, 0 r" stroke="color" fill="none" /> -->
-        <g id="left-arms">
-          <path
-            id="5"
-            d="M 200 50 c 0 27.62, 22.39 50, 50 50 l0 10 c-33.14 0, -60 -26.86, -60 -60 Z"
-            fill="yellow"
-          ></path>
-
-          <path
-            id="6"
-            d="M 160 50 c 0 49.71, 40.29 90, 90 90 l0 10 c-55.23 0, -100 -44.77, -100 -100 Z"
-            fill="yellow"
-          ></path>
-
-          <path
-            id="7"
-            d="M 120 50 c 0 71.80, 58.20 130, 130 130 l0 10 c-77.32 0, -140 -62.68, -140 -140 Z"
-            fill="yellow"
-          ></path>
-
-          <path
-            id="9"
-            d="M 80 50 c 0 93.89, 76.11 170, 170 170 l0 10 c-99.41 0, -180 -80.59, -180 -180 Z"
-            fill="yellow"
-          ></path>
-        </g>
-        <g id="right-arms">
-          <path
-            id="4"
-            d="M 300 50 c 0 27.62, -22.39 50, -50 50 l0 10 c33.14 0, 60 -26.86, 60 -60 Z"
-            fill="yellow"
-          ></path>
-
-          <path
-            id="3"
-            d="M 340 50 c 0 49.71, -40.29 90, -90 90 l0 10 c55.23 0, 100 -44.77, 100 -100 Z"
-            fill="yellow"
-          ></path>
-
-          <path
-            id="2"
-            d="M 380 50 c 0 71.80, -58.20 130, -130 130 l0 10 c77.32 0, 140 -62.68, 140 -140 Z"
-            fill="yellow"
-          ></path>
-
-          <path
-            id="1"
-            d="M 420 50 c 0 93.89, -76.11 170, -170 170 l0 10 c99.41 0, 180 -80.59, 180 -180 Z"
-            fill="yellow"
-          ></path>
-        </g>
-
-        <!-- candle holders -->
-        <g class="candle-holders">
-          <g class="holder-5">
-            <path
-              d="M 190 43 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
-              fill="yellow"
-            ></path>
-            <rect
-              x="185"
-              y="43"
-              width="20"
-              height="7"
-              rx="5"
-              fill="yellow"
-            ></rect>
-          </g>
-        </g>
-
-        <!-- shamash -->
         <defs>
-          <linearGradient id="gradient-top" x1="0%" y1="0%" x2="100%" y2="0%">
+          <linearGradient
+            id="candle-holder-cone"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop
+              offset="40%"
+              style="stop-color: var(--dark-orange); stop-opacity: 1"
+            ></stop>
+            <stop
+              offset="60%"
+              style="stop-color: var(--medium-orange); stop-opacity: 1"
+            ></stop>
+            <stop
+              offset="80%"
+              style="stop-color: var(--light-orange); stop-opacity: 1"
+            ></stop>
+          </linearGradient>
+          <linearGradient
+            id="candle-holder-ellipse"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop
+              offset="20%"
+              style="stop-color: var(--dark-orange); stop-opacity: 1"
+            ></stop>
+            <stop
+              offset="50%"
+              style="stop-color: var(--medium-dark-orange); stop-opacity: 1"
+            ></stop>
+            <stop
+              offset="60%"
+              style="stop-color: var(--medium-orange); stop-opacity: 1"
+            ></stop>
+            <stop
+              offset="70%"
+              style="stop-color: var(--light-orange); stop-opacity: 1"
+            ></stop>
+          </linearGradient>
+
+          <linearGradient
+            id="shamash-support-gradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
             <stop
               offset="48%"
               style="stop-color: #958032; stop-opacity: 1"
@@ -99,7 +78,7 @@
             ></stop>
           </linearGradient>
           <radialGradient
-            id="radial-gradient"
+            id="shamash-base-gradient"
             cx="50%"
             cy="30%"
             r="65%"
@@ -119,20 +98,191 @@
           </radialGradient>
         </defs>
 
-        <g id="shamash-support">
+        <!-- Menorah elements -->
+        <g id="left-arms">
           <path
-            id="0"
-            class="shamash-shaft"
-            d="M 245 50 l0 170 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 l0 -170 Z"
-            fill="url(#gradient-top)"
+            id="arm-5"
+            d="M 200 50 c 0 27.62, 22.39 50, 50 50 l0 10 c-33.14 0, -60 -26.86, -60 -60 Z"
           ></path>
 
           <path
-            id="0"
-            class="shamash-base"
-            d="M 245 220 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 Z"
-            fill="url(#radial-gradient)"
+            id="arm-6"
+            d="M 160 50 c 0 49.71, 40.29 90, 90 90 l0 10 c-55.23 0, -100 -44.77, -100 -100 Z"
           ></path>
+
+          <path
+            id="arm-7"
+            d="M 120 50 c 0 71.80, 58.20 130, 130 130 l0 10 c-77.32 0, -140 -62.68, -140 -140 Z"
+          ></path>
+
+          <path
+            id="arm-8"
+            d="M 80 50 c 0 93.89, 76.11 170, 170 170 l0 10 c-99.41 0, -180 -80.59, -180 -180 Z"
+          ></path>
+        </g>
+        <g id="right-arms">
+          <path
+            id="arm-4"
+            d="M 300 50 c 0 27.62, -22.39 50, -50 50 l0 10 c33.14 0, 60 -26.86, 60 -60 Z"
+          ></path>
+
+          <path
+            id="arm-3"
+            d="M 340 50 c 0 49.71, -40.29 90, -90 90 l0 10 c55.23 0, 100 -44.77, 100 -100 Z"
+          ></path>
+
+          <path
+            id="arm-2"
+            d="M 380 50 c 0 71.80, -58.20 130, -130 130 l0 10 c77.32 0, 140 -62.68, 140 -140 Z"
+          ></path>
+
+          <path
+            id="arm-1"
+            d="M 420 50 c 0 93.89, -76.11 170, -170 170 l0 10 c99.41 0, 180 -80.59, 180 -180 Z"
+          ></path>
+        </g>
+
+        <!-- shamash -->
+        <g id="shamash-support">
+          <path
+            d="M 245 23 l0 197 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 l0 -197 Z"
+            fill="url(#shamash-support-gradient)"
+          ></path>
+
+          <path
+            d="M 245 220 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 Z"
+            fill="url(#shamash-base-gradient)"
+          ></path>
+        </g>
+
+        <!-- candle holders -->
+        <g class="candle-holders">
+          <g class="holder-0">
+            <path
+              d="M 245 30 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="240"
+              y="30"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-1">
+            <path
+              d="M 420 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="414.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-2">
+            <path
+              d="M 380 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="374.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-3">
+            <path
+              d="M 340 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="334.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-4">
+            <path
+              d="M 300 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="294.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-5">
+            <path
+              d="M 190.5 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="185.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-6">
+            <path
+              d="M 150.5 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="145.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-7">
+            <path
+              d="M 110.5 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="105.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
+          <g class="holder-8">
+            <path
+              d="M 70.5 50 l10 0, 12 -13, 0 -2, -34 0, 0 2 Z"
+              fill="url(#candle-holder-cone)"
+            ></path>
+            <rect
+              x="65.5"
+              y="50"
+              width="20"
+              height="7"
+              rx="5"
+              fill="url(#candle-holder-ellipse)"
+            ></rect>
+          </g>
         </g>
       </svg>
 

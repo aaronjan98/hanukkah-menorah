@@ -1,8 +1,10 @@
 :root {
   --bright-yellow: #f6d64f;
   --dijon-yellow: #f7d750;
+  --medium-yellow: #e6c849;
   --light-orange: #f3a61e;
   --medium-orange: #f5822b;
+  --medium-dark-orange: #d88b32;
   --dark-orange: #958032;
 }
 
@@ -41,7 +43,7 @@ body {
 }
 
 #right-arms path {
-  fill: var(--bright-yellow);
+  fill: var(--medium-yellow);
 }
 
 .candle {
