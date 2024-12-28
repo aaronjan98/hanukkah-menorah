@@ -89,44 +89,138 @@
               style="stop-color: #f6d654; stop-opacity: 1"
             ></stop>
           </linearGradient>
-          <linearGradient
-            id="gradient-bottom"
-            x1="0%"
-            y1="0%"
-            x2="0%"
-            y2="100%"
+          <radialGradient
+            id="radial-gradient"
+            cx="50%"
+            cy="30%"
+            r="65%"
+            fx="50%"
+            fy="0%"
           >
-            <stop offset="0%" stop-color="#f6d654" stop-opacity="0"></stop>
+            <stop
+              offset="5%"
+              style="stop-color: #f6d654; stop-opacity: 0"
+            ></stop>
             <stop offset="35%" stop-color="#f6d654" stop-opacity="1"></stop>
             <stop offset="60%" stop-color="#f3a61e" stop-opacity="1"></stop>
-            <stop offset="85%" stop-color="#958032" stop-opacity="1"></stop>
-          </linearGradient>
+            <stop
+              offset="95%"
+              style="stop-color: #958032; stop-opacity: 1"
+            ></stop>
+          </radialGradient>
         </defs>
 
-        <path
-          id="0"
-          class="shamash-shaft"
-          d="M 245 50 l0 185 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 l0 -185 Z"
-          fill="url(#gradient-top)"
-        ></path>
+        <g id="shamash-support">
+          <path
+            id="0"
+            class="shamash-shaft"
+            d="M 245 50 l0 185 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 l0 -185 Z"
+            fill="url(#gradient-top)"
+          ></path>
 
-        <path
-          id="0"
-          class="shamash-base"
-          d="M 245 235 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 Z"
-          fill="url(#gradient-bottom)"
-        ></path>
+          <path
+            id="0"
+            class="shamash-base"
+            d="M 245 235 q0 35, -30 45 q-35 10, -30 25 c15 15, 115 15, 130 0 q5 -15, -30 -25 q-30 -10, -30 -45 Z"
+            fill="url(#radial-gradient)"
+          ></path>
+        </g>
       </svg>
 
-      <!-- Candle flames positioned outside the SVG -->
-      <div
-        class="candle-flame"
-        style="position: absolute; top: -50px; left: 120px"
-      ></div>
-      <div
-        class="candle-flame"
-        style="position: absolute; top: -50px; left: 160px"
-      ></div>
+      <!-- Candles positioned outside the SVG -->
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        class="candles"
+      >
+        <g id="candles">
+          <rect
+            id="candle-1"
+            x="110"
+            y="140"
+            width="20"
+            height="50"
+            fill="white"
+          />
+          <rect
+            id="candle-2"
+            x="150"
+            y="140"
+            width="20"
+            height="50"
+            fill="white"
+          />
+          <rect
+            id="candle-3"
+            x="190"
+            y="140"
+            width="20"
+            height="50"
+            fill="white"
+          />
+          <rect
+            id="candle-4"
+            x="230"
+            y="140"
+            width="20"
+            height="50"
+            fill="white"
+          />
+          <rect
+            id="candle-5"
+            x="270"
+            y="140"
+            width="20"
+            height="50"
+            fill="white"
+          />
+        </g>
+
+        <!-- Flames (hidden by default) -->
+        <g id="flames">
+          <circle
+            id="flame-1"
+            cx="120"
+            cy="130"
+            r="10"
+            fill="orange"
+            style="display: none"
+          />
+          <circle
+            id="flame-2"
+            cx="160"
+            cy="130"
+            r="10"
+            fill="orange"
+            style="display: none"
+          />
+          <circle
+            id="flame-3"
+            cx="200"
+            cy="130"
+            r="10"
+            fill="orange"
+            style="display: none"
+          />
+          <circle
+            id="flame-4"
+            cx="240"
+            cy="130"
+            r="10"
+            fill="orange"
+            style="display: none"
+          />
+          <circle
+            id="flame-5"
+            cx="280"
+            cy="130"
+            r="10"
+            fill="orange"
+            style="display: none"
+          />
+        </g>
+      </svg>
     </div>
   </body>
 </html>
