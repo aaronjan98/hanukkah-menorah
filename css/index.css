@@ -7,13 +7,29 @@
 }
 
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: black;
+  color: yellow;
+  text-align: center;
 }
 
-svg {
-  border: 3px red solid;
-  width: max-content;
-  max-width: 1048px;
+.menorah-container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+}
+
+.menorah {
+  /* border: 3px red solid; */
+  max-width: 700px;
+  height: auto;
+  margin: auto;
 }
 
 .shamash-column {
@@ -26,4 +42,23 @@ svg {
 
 #right-arms path {
   fill: var(--bright-yellow);
+}
+
+.candle {
+  position: absolute;
+  width: 4%;
+  height: auto;
+}
+
+#candle-1 {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  color: yellow;
+}
+#candle-2 {
+  position: absolute;
+  top: 0%;
+  left: 39.35%;
+  color: yellow;
 }
