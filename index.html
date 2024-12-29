@@ -300,12 +300,28 @@
       </svg>
 
       <!-- Candles positioned outside the SVG -->
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 30 170"
         id="candle-7"
         class="candle"
+        overflow="visible"
       >
+        <!-- Glow Filter -->
+        <defs>
+          <filter id="flame-glow" x="-90%" y="-50%" width="280%" height="200%">
+            <!-- Outer glow -->
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="8"
+              result="blurred"
+            ></feGaussianBlur>
+            <!-- Blend for softer edges -->
+            <feBlend in="blurred" in2="SourceGraphic" mode="screen"></feBlend>
+          </filter>
+        </defs>
+
         <!-- Candle Body -->
         <rect
           x="5"
@@ -319,13 +335,56 @@
         <rect x="13" y="35" width="4" height="10" fill="#AD88A9"></rect>
 
         <!-- Flame -->
-        <g class="flame" transform-origin="30 40">
+        <g class="flame" transform-origin="15 20">
           <!-- Pointy Flame -->
-
           <path
             d="M15 10 c-5 12, -14 18, 0 30 c14 -12, 5 -18, 0 -30 z"
             fill="orange"
-          ></path>
+            filter="url(#flame-glow)"
+          >
+            <!-- Animate color flicker -->
+            <animate
+              attributeName="fill"
+              values="orange;yellow;orange"
+              dur="5s"
+              repeatCount="indefinite"
+            ></animate>
+
+            <!-- Animate flame movement -->
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              values="-3 15 35; 5 15 35; -3 15 35"
+              dur="3s"
+              repeatCount="indefinite"
+            ></animateTransform>
+          </path>
+
+          <!-- Inner Glow -->
+          <path
+            d="M15 15 c-3 8, -10 12, 0 24 c10 -12, 3 -14, 0 -24 z"
+            fill="yellow"
+            opacity="0.8"
+          >
+            <!-- Animate shrinking in height -->
+            <animate
+              attributeName="d"
+              values="
+          M15 15 c-3 8, -10 12, 0 24 c10 -12, 3 -14, 0 -24 z;
+          M15 16 c-3 7, -10 10, 0 21 c10 -10, 3 -12, 0 -21 z;
+          M15 15 c-3 8, -10 12, 0 24 c10 -12, 3 -14, 0 -24 z
+        "
+              dur="2.5s"
+              repeatCount="indefinite"
+            ></animate>
+            <!-- Animate opacity -->
+            <animate
+              attributeName="opacity"
+              values="0.8;0.7;0.9;0.8"
+              dur="2.5s"
+              repeatCount="indefinite"
+            ></animate>
+          </path>
         </g>
       </svg>
     </div>

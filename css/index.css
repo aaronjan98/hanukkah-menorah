@@ -20,6 +20,12 @@ body {
   text-align: center;
 }
 
+@media (min-width: 405px) {
+  h1 {
+    font-size: xxx-large;
+  }
+}
+
 .menorah-container {
   position: relative;
   max-width: 675px;
