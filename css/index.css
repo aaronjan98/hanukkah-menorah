@@ -18,6 +18,7 @@ body {
   background: black;
   color: yellow;
   text-align: center;
+  min-height: 100vh;
 }
 
 @media (min-width: 405px) {
