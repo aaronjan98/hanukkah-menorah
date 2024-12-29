@@ -302,19 +302,31 @@
       <!-- Candles positioned outside the SVG -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 125"
-        id="candle-0"
+        viewBox="0 0 30 170"
+        id="candle-7"
         class="candle"
       >
-        <rect width="20" height="125" fill="url(#candle-gradient)"></rect>
-      </svg>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 125"
-        id="candle-8"
-        class="candle"
-      >
-        <rect width="20" height="125" fill="url(#candle-gradient)"></rect>
+        <!-- Candle Body -->
+        <rect
+          x="5"
+          y="45"
+          width="20"
+          height="125"
+          fill="url(#candle-gradient)"
+        ></rect>
+
+        <!-- Wick -->
+        <rect x="13" y="35" width="4" height="10" fill="#AD88A9"></rect>
+
+        <!-- Flame -->
+        <g class="flame" transform-origin="30 40">
+          <!-- Pointy Flame -->
+
+          <path
+            d="M15 10 c-5 12, -14 18, 0 30 c14 -12, 5 -18, 0 -30 z"
+            fill="orange"
+          ></path>
+        </g>
       </svg>
     </div>
   </body>
