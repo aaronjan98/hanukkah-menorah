@@ -59,16 +59,39 @@ body {
 }
 
 #candle-0 {
-  top: 16.3%;
-  left: 48%;
+  top: 8.2%;
+  left: 47%;
 }
 
-#candle-8 {
-  top: 20%;
-  left: 13%;
+#candle-1 {
+  top: 11.8%;
+  left: 82%;
 }
-
+#candle-2 {
+  top: 11.8%;
+  left: 74%;
+}
+#candle-3 {
+  top: 11.8%;
+  left: 66%;
+}
+#candle-4 {
+  top: 11.8%;
+  left: 58%;
+}
+#candle-5 {
+  top: 11.8%;
+  left: 36.2%;
+}
+#candle-6 {
+  top: 11.8%;
+  left: 28.2%;
+}
 #candle-7 {
   top: 11.8%;
   left: 20.2%;
+}
+#candle-8 {
+  top: 11.8%;
+  left: 12%;
 }
