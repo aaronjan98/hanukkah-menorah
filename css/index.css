@@ -39,6 +39,7 @@ body {
   height: auto;
   margin: auto;
   padding-top: 40%;
+  z-index: 1;
 }
 
 .shamash-column {
