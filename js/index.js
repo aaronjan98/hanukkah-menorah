@@ -24,11 +24,16 @@ function lightCandles(day) {
 
 function randomizeFlameMovements() {
   document.querySelectorAll(".flame animateTransform").forEach((anim) => {
-    const randomRotation = Math.random() * 8 - 4; // Random between -3 and 3
+    const randomRotation = Math.random() * 12 - 6;
     anim.setAttribute(
       "values",
       `${randomRotation} 15 35; -${randomRotation} 15 35; ${randomRotation} 15 35`
     );
+  });
+}
+function genRandomBeginFlameTimes() {
+  document.querySelectorAll(".flame animate").forEach((animate, index) => {
+    animate.setAttribute("begin", `${Math.random() * 5}s`);
   });
 }
 
@@ -36,4 +41,5 @@ document.addEventListener("DOMContentLoaded", () => {
   const dayOfHanukkah = calculateDayOfHanukkah();
   lightCandles(dayOfHanukkah);
   randomizeFlameMovements();
+  // genRandomBeginFlameTimes();
 });
