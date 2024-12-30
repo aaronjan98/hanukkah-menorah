@@ -6,6 +6,10 @@
   --medium-orange: #f5822b;
   --medium-dark-orange: #d88b32;
   --dark-orange: #958032;
+
+  --light-turquoise: #5d81ad;
+  --dark-turquoise: #054f7f;
+  --red: #b52d3b;
 }
 
 body {
@@ -25,6 +29,17 @@ body {
   h1 {
     font-size: xxx-large;
   }
+}
+
+.stars-container {
+  height: 0;
+  width: 100%;
+  max-width: 675px;
+  position: relative;
+  visibility: hidden;
+}
+.circle-stars {
+  fill: var(--light-turquoise);
 }
 
 .menorah-container {

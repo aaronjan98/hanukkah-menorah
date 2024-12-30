@@ -5,11 +5,15 @@ function calculateDayOfHanukkah() {
   hanukkahEnd.setDate(hanukkahEnd.getDate() + 8);
 
   return today >= hanukkahStart && today < hanukkahEnd
-    ? Math.min(8, Math.floor((today - hanukkahStart) / (1000 * 60 * 60 * 24)))
+    ? Math.min(
+        8,
+        Math.floor((today - hanukkahStart) / (1000 * 60 * 60 * 24)) + 1
+      )
     : 0;
 }
 
 function lightCandles(day) {
+  console.log(day);
   for (let i = 0; i <= 8; i++) {
     if (i > day) {
       return;
