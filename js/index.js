@@ -1,19 +1,31 @@
 function calculateDayOfHanukkah() {
-  const hanukkahStart = new Date("2024-12-25");
-  const today = new Date();
-  const hanukkahEnd = new Date(hanukkahStart);
+  const hanukkahStart = new Date(Date.UTC(2024, 11, 25));
+  const hanukkahStartPST = convertToPST(hanukkahStart);
+  const hanukkahEnd = new Date(hanukkahStartPST);
   hanukkahEnd.setDate(hanukkahEnd.getDate() + 8);
 
-  return today >= hanukkahStart && today < hanukkahEnd
-    ? Math.min(
-        8,
-        Math.floor((today - hanukkahStart) / (1000 * 60 * 60 * 24)) + 1
-      )
+  const today = new Date();
+  const flooredDate = new Date(
+    Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())
+  );
+  const flooredDatePST = convertToPST(flooredDate);
+
+  const daysDifference = Math.floor(
+    (flooredDatePST.getTime() - hanukkahStartPST.getTime()) /
+      (1000 * 60 * 60 * 24) +
+      1
+  );
+
+  return flooredDatePST >= hanukkahStartPST && flooredDatePST < hanukkahEnd
+    ? daysDifference
     : 0;
 }
 
+function convertToPST(date) {
+  return new Date(date.getTime() - 8 * 60 * 60 * 1000);
+}
+
 function lightCandles(day) {
-  console.log(day);
   for (let i = 0; i <= 8; i++) {
     if (i > day) {
       return;
